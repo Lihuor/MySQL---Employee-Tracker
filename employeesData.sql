@@ -14,9 +14,6 @@ VALUES (3, "Warehouse");
 INSERT INTO department (id, name)
 VALUES (4, "TeleMarketing");
 
-INSERT INTO department (id, name)
-VALUES (4, "TeleMarketing");
-
 ----- Role -----
 
 INSERT INTO role (id, title, salary, department_id)
