@@ -24,4 +24,4 @@ Employee Tracker made by Lihuor using Node Js to view all employees, add new emp
   * **role_id** - INT to hold reference to role employee has
   * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
   
-
+![EmployeeGif](Assets/Employee%20Tracker.gif)
