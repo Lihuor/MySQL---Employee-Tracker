@@ -1,41 +1,79 @@
-SELECT * FROM employee_DB.department;
+USE employees_DB;
 
------ Deparment data -----
+----- Department -----
 
-INSERT INTO department (name)
-VALUES ("Sales"), ("Accountants"), ("Warehouse"), ("TeleMarketing"), ("Manager");
+INSERT INTO department (id, name)
+VALUES (1, "Sales");
 
+INSERT INTO department (id, name)
+VALUES (2, "Accounting");
 
------- Role -----
-SELECT * FROM employee_DB.role;
+INSERT INTO department (id, name)
+VALUES (3, "Warehouse");
 
-INSERT INTO role 
-(title, salary, department_id)
-VALUES 
-("Door to door knock", 65000, 1),
-("Telephone Sales", 55000, 1),
-("Accounting Manager", 75000, 2),
-("Accounting Assistant", 65000, 2),
-("Warehouse Manager", 70000, 3),
-("Warehouse Assistant", 65000, 2),
-("TeleMarketing Manager", 70000, 4),
-("TeleMarketing Assistant", 60000, 4),
-("TeleMarketing Agent", 55000, 4),
-("Managing Director", 100000, 5);
+INSERT INTO department (id, name)
+VALUES (4, "TeleMarketing");
 
------- Employees -----
+INSERT INTO department (id, name)
+VALUES (4, "TeleMarketing");
 
-INSERT INTO employee 
-(first_name, last_name, role_id, manager_id)
-VALUES 
-("Luna", "Smith", 1, null),
-("Aurora", "Jones", 1, null),
-("Asher", "Smith", 3, 10, null),
-("Milo", "Wilson", 4, null),
-("Milo", "Jones", 5, 20),
-("Oliver", "Smith", 7, 30),
-("Levi", "Taylor", 8, null),
-("Olivia", "Brown", 9, null),
-("Levi", "Williams", 9, null),
-("Williams", "Brown", 9, null),
-("Lihuor", "Slot", 10, 999);
+----- Role -----
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (1, "Door to Door Knock", 42000, 1);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (2, "Telephone Sales", 60000, 1);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (3, "Accounting Manager", 75000, 1);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (4, "Warehouse Manager", 65000, 2);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (5, "Warehouse Assistant", 70000, 3);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (6, "TeleMarketing Manager", 100000, 3);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (7, "TeleMarketing Assistant", 80000, 4);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (8, "TeleMarketing Agent", 52000, 4);
+
+INSERT INTO role (id, title, salary, department_id)
+VALUES (9, "Managine Director", 105000, 4);
+
+----- Employees -----
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (4, "Charbelle", "Chaz", 3, null);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (5, "Sofi", "Hernan", 4, null);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (7, "Char", "Dant", 6, null);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (10, "Jonathan", "Uong", 9, null);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (3, "Melissa", "Arm", 2, 4);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (1, "Alla", "Arous", 1, 3);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (2, "Rosie", "Cole", 1, 3);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (6, "Lianne", "Soon", 5, 7);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (8, "Zach", "Soar", 7, 10);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (9, "Martin", "Cast", 8, 10);
